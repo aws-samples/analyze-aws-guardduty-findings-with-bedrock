@@ -82,4 +82,10 @@ The solution creates:
 ## License
 
 This project is licensed under the MIT-0 License.
+<<<<<<< HEAD
 ```
+=======
+```
+
+
+>>>>>>> 2894b67 (Done changes to readme file)
