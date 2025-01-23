@@ -50,7 +50,7 @@ cd analyze-aws-guardduty-findings-with-bedrock
 2. Deploy using CloudFormation
 ```bash
 aws cloudformation deploy \
-  --template-file template.yaml \
+  --template-file guardduty_findings_analyzer_ses.yml \
   --stack-name guardduty-analyzer \
   --parameter-overrides \
     SenderEmail=your-verified@email.com \
