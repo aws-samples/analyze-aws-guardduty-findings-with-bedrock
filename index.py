@@ -37,6 +37,7 @@ def get_severity_info(severity):
         return {'level': 'Unknown', 'color': '#808080'}
 
 def handler(event, context):
+    print(event)
     logger.info(f"Received event: {json.dumps(event)}")
 
     for record in event['Records']:
@@ -53,7 +54,7 @@ def handler(event, context):
         finding_type = detail.get('type', 'Unknown Type')
         title = detail.get('title', 'Unknown Title')
         description = detail.get('description', 'Unknown Description')
-        
+        print(description)
         # Extract resource details
         resource = detail.get('resource', {})
         resource_type = resource.get('resourceType', 'Unknown Resource Type')
