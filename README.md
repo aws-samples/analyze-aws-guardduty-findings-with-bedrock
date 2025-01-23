@@ -43,8 +43,8 @@ This project streamlines security monitoring by processing GuardDuty findings th
 
 1. Clone the repository
 ```bash
-git clone https://github.com/kgautams-123/aws-guardduty-findings-analyzer-ses.git
-cd aws-guardduty-findings-analyzer-ses
+git https://github.com/aws-samples/analyze-aws-guardduty-findings-with-bedrock
+cd analyze-aws-guardduty-findings-with-bedrock
 ```
 
 2. Deploy using CloudFormation
@@ -81,5 +81,5 @@ The solution creates:
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT-0 License.
 ```
