@@ -1,17 +1,85 @@
-## My Project
+# AWS GuardDuty Findings Analyzer with SES
 
-TODO: Fill this README out!
+A comprehensive security monitoring solution that automatically analyzes AWS GuardDuty findings using Amazon Bedrock's Claude 3 Sonnet model and delivers detailed security alerts via Amazon SES.
 
-Be sure to:
+## Overview
 
-* Change the title in this README
-* Edit your repository description on GitHub
+This project streamlines security monitoring by processing GuardDuty findings through AI analysis and delivering formatted reports containing:
+- Severity assessment
+- Finding details
+- Resource information
+- Network analysis
+- AI-generated insights and recommendations
 
-## Security
+## Features
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+- Automated GuardDuty findings processing
+- AI-powered analysis using Amazon Bedrock
+- Formatted email alerts via Amazon SES
+- Detailed resource and network information
+- Severity-based categorization
+- Region-specific monitoring
+
+## Prerequisites
+
+- AWS Account
+- GuardDuty enabled
+- Amazon Bedrock access
+- Configured Amazon SES
+- IAM permissions for Lambda execution
+
+## Architecture
+
+**AWS Services Used:**
+- AWS GuardDuty: Threat detection
+- Amazon Bedrock: AI analysis
+- Amazon SES: Email delivery
+- AWS Lambda: Processing
+- Amazon EventBridge: Event routing
+
+![Architecture Diagram](Architrcture.png)
+
+## Deployment
+
+1. Clone the repository
+```bash
+git clone https://github.com/kgautams-123/aws-guardduty-findings-analyzer-ses.git
+cd aws-guardduty-findings-analyzer-ses
+```
+
+2. Deploy using CloudFormation
+```bash
+aws cloudformation deploy \
+  --template-file template.yaml \
+  --stack-name guardduty-analyzer \
+  --parameter-overrides \
+    SenderEmail=your-verified@email.com \
+    RecipientEmail=security-team@company.com
+```
+
+## Configuration
+
+Update the CloudFormation parameters:
+- SenderEmail: Verified SES email address
+- RecipientEmail: Security team email address
+
+## IAM Permissions
+
+The solution creates:
+- Lambda execution role
+- Permissions for GuardDuty access
+- SES sending privileges
+- Bedrock model invocation rights
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
 
 ## License
 
-This library is licensed under the MIT-0 License. See the LICENSE file.
-
+This project is licensed under the MIT License.
+```
