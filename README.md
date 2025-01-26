@@ -1,6 +1,6 @@
 # AWS GuardDuty Findings Analyzer with SES
 
-A comprehensive security monitoring solution that automatically analyzes AWS GuardDuty findings using Amazon Bedrock's Claude 3 Sonnet model and delivers detailed security alerts via Amazon SES.
+A comprehensive security monitoring solution that automatically analyzes Amazon GuardDuty findings using Anthropic Claude 3 Sonnet model available on Amazon Bedrock and delivers detailed security alerts via Amazon SES.
 
 ## Overview
 
